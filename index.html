@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eclipse Executor - The ultimate keyless and free Roblox utility for smoother gameplay and enhanced experience.">
+    <meta name="author" content="Eclipse">
+    <title>Eclipse Executor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #121212;
+            color: #f1f1f1;
+            line-height: 1.75;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        header {
+            background: linear-gradient(135deg, #333333, #222222);
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 5px solid #444444;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        header img {
+            max-width: 200px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            color: #ffffff;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #bbbbbb;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #a1a1a1;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #2d2d2d;
+            padding: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: background-color 0.4s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #444444;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background: url('https://cdn.discordapp.com/attachments/1302655883167141974/1319718820746625187/Eclipse.png') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero button {
+            padding: 18px 35px;
+            background: #444444;
+            color: #f1f1f1;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #555555;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #f1f1f1;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid #444444;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: #333333;
+            border: 1px solid #444444;
+            border-radius: 20px;
+            padding: 35px;
+            margin: 25px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.4s ease;
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .card h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: #bbbbbb;
+            margin-bottom: 25px;
+        }
+
+        .card button {
+            padding: 15px 30px;
+            background: #444444;
+            color: #f1f1f1;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .card button:hover {
+            background: #555555;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            background: #252525;
+            color: #bbbbbb;
+            padding: 40px 20px;
+            border-top: 5px solid #444444;
+            margin-top: 80px;
+            transition: all 0.4s ease;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #888888;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <img src="https://cdn.discordapp.com/attachments/1302655883167141974/1319720316552872036/Eclipse_logo-removebg-preview.png?ex=6766fcd2&is=6765ab52&hm=c9f173329b62c1705c013c4cf6e8fc3b90fc44ff983746e9420fcb38ec9f6cfb&" alt="Eclipse Logo">
+        <h1>Eclipse Executor</h1>
+        <p>Your <span class="highlight">ultimate</span> overpowered and free Roblox utility</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h2>Upgrade Your Roblox Experience</h2>
+            <button onclick="alert('Download is just a click away!')">Download Now</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="features">
+            <h2>Features</h2>
+            <div class="card">
+                <h3>100% UNC</h3>
+                <p>Our tool delivers unmatched performance and reliability for Roblox players.</p>
+            </div>
+            <div class="card">
+                <h3>Free With Key</h3>
+                <p>Completely free to use, just has a short key system</p>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Download</h2>
+            <div class="card">
+                <h3>Get the Latest Version</h3>
+                <p>Click below to download the latest version of Eclipse Executor.</p>
+                <button onclick="alert('Download coming soon!')">Download Now</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="card">
+                <h3>Stay Connected</h3>
+                <p>Have questions or feedback? Join our active Discord community!</p>
+                <p><a href="https://discord.gg/aAnad3PMPX" target="_blank">Join Discord</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eclipse Executor. Crafted with ❤️ for Roblox enthusiasts.<br><a href="#contact">Contact Us</a></p>
+    </footer>
+</body>
+</html>
